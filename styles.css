@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Baby Teeth, sans-serif;
     background-color: #f0f0f000;
 	color: #000000;
     margin: 0;
@@ -12,7 +12,6 @@ body {
 
 #panel {
     background-color: #ffffff00;
-	
     width: 350px;
     padding: 20px;
     border: 1px solid #cccccc;
@@ -32,6 +31,7 @@ h1 {
 #content p {
     margin: 5px 0;
     animation: slideFromTop 0.5s forwards; /* Animation für Texte */
+	font-family: 'Montserrat', sans-serif;
     opacity: 0; /* Start opacity für Animation */
 }
 
@@ -63,4 +63,3 @@ body {
         background-position: 0% 50%;
     }
 }
-
