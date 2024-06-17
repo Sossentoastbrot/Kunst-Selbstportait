@@ -122,6 +122,7 @@ let texts = [
     }
 ];
 
+
 const panel = document.getElementById('panel'); 
 
 
@@ -162,4 +163,3 @@ function handleTouchEnd(event) {
       panel.style.border = '1px solid #cccccc;';
     }, 100); 
 }
-
