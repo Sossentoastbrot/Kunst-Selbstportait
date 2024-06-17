@@ -126,21 +126,12 @@ let texts = [
 const panel = document.getElementById('panel'); 
 
 
-function handleKeyDown(event) {
-  if (event.key === 'z' || event.key === 'Z' || event.key === 'v' || event.key === 'V') { 
-    panel.style.backgroundColor = '#e0e0e020'; 
-    panel.style.border = '1px solid #cccccc'; 
-  }
-}
-
-
-document.addEventListener('keydown', handleKeyDown);
-
 function handleKeyUp(event) {
   if (event.key === 'z' || event.key === 'Z' || event.key === 'v' || event.key === 'V') {
     setTimeout(function() {
       panel.style.backgroundColor = '#ffffff00';
       panel.style.border = '1px solid #cccccc;';
+	  panel.style.transform = 'scale(1)';
     }, 100); 
   }
 }
@@ -155,10 +146,16 @@ document.addEventListener('touchend', handleTouchEnd);
 function handleTouchStart(event) {
 	panel.style.backgroundColor = '#e0e0e020'; 
     panel.style.border = '1px solid #cccccc';
+	panel.style.transform = 'scale(1.05)';
+}
+
+function handleTouchEnd(event) {
 	setTimeout(function() {
       panel.style.backgroundColor = '#ffffff00';
       panel.style.border = '1px solid #cccccc;';
+	  panel.style.transform = 'scale(1)';
     }, 100); 
 }
+
 
 
