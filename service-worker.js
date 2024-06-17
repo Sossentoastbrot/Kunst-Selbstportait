@@ -8,7 +8,12 @@ self.addEventListener('install', function(event) {
                 '/styles.css',
                 '/script.js',
                 '/manifest.json',
-                '/icon.png'  // Passe dies entsprechend an, wenn du ein Icon hast
+                '/icon.png', // Passe dies entsprechend an, wenn du ein Icon hast
+                '/image1.jpg',
+                '/image2.jpg',
+                '/image3.jpg',
+                '/image4.jpg',
+                '/image5.jpg'
             ]);
         })
     );

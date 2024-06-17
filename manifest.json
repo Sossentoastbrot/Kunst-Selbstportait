@@ -1,6 +1,6 @@
 {
-    "name": "Kunst: Selbstporträt",
-    "short_name": "Selbstporträt",
+    "name": "Meine Progressive Web App",
+    "short_name": "PWA",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
