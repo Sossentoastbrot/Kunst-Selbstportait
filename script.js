@@ -155,11 +155,10 @@ document.addEventListener('touchend', handleTouchEnd);
 function handleTouchStart(event) {
 	panel.style.backgroundColor = '#e0e0e020'; 
     panel.style.border = '1px solid #cccccc';
-}
-
-function handleTouchEnd(event) {
 	setTimeout(function() {
       panel.style.backgroundColor = '#ffffff00';
       panel.style.border = '1px solid #cccccc;';
     }, 100); 
 }
+
+
