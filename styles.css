@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000; /* Schwarzer Hintergrund */
-    color: #F0F0F0; /* Weiße Schrift */
+    background-color: #f0f0f000;
+	color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,35 +11,39 @@ body {
 }
 
 #panel {
-    background-color: #333333; /* Dunkelgrauer Hintergrund für das Panel */
-    width: 350px;
+    background-color: #ffffff00;
+	
+    width: 300px;
     padding: 20px;
-    border: 1px solid #666666; /* Hellgrauer Rand */
-    text-align: left;
-    color: #ffffff; /* Weiße Schrift im Panel */
+    border: 1px solid #cccccc;
+    text-align: center;
+    position: relative; /* Position relativ setzen */
+    overflow: hidden; /* Overflow verstecken, damit animierte Texte nicht sichtbar sind */
 }
 
 h1 {
     font-size: 24px;
     margin: 0;
     padding: 10px 0;
+    animation: slideFromTop 0.5s forwards; /* Animation für Überschrift */
+    opacity: 0; /* Start opacity für Animation */
 }
 
 #content p {
     margin: 5px 0;
+    animation: slideFromTop 0.5s forwards; /* Animation für Texte */
+    opacity: 0; /* Start opacity für Animation */
 }
 
-#image-container {
-    margin-left: 20px;
-}
-
-#image {
-    max-width: 100%;
-    height: auto;
-}
-html, body {
-  width: 100%;
-  height:100%;
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 body {
