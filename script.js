@@ -97,7 +97,7 @@ let texts = [
     },
     {
         title: "<b><u>Inhalte</u></b>",
-        items: ["Grundlegendes", "Hobbys", "Interessen", "Interessen bezogen auf Kunst"],
+        items: ["Grundlegendes", "Hobbys", "Interessen", "Interessen bezogen auf Kunst","Private Ziele","Ziele für die Gesellschaft"],
 		image: "image2.jpg",
 		imagePosition: "left"
     },
