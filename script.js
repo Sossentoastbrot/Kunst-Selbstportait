@@ -1,17 +1,17 @@
 let currentIndex = 0;
 let previousIndex = 0;
-let forwardCount = 0; // Zähler für vorwärts Navigation
+let forwardCount = 0; 
 
 function switchText(event) {
     if (event && event.key) {
         if (event.key === 'z' || event.key === 'Z' || event.key === 'ArrowLeft') {
             if (currentIndex > 0) {
-                currentIndex = (currentIndex - 1) % texts.length; // Index für vorherigen Text berechnen
-                forwardCount = Math.max(0, forwardCount - 1); // Vorwärtszähler reduzieren, aber nicht unter 0 gehen
+                currentIndex = (currentIndex - 1) % texts.length; 
+                forwardCount = Math.max(0, forwardCount - 1); 
             }
         } else if (event.key === 'v' || event.key === 'V' || event.key === 'ArrowRight') {
-            if (forwardCount < 5 && currentIndex < texts.length - 1) {
-                currentIndex = (currentIndex + 1) % texts.length; // Index für nächsten Text berechnen
+            if (forwardCount < 7 && currentIndex < texts.length - 1) {
+                currentIndex = (currentIndex + 1) % texts.length; 
                 forwardCount++;
             }
         }
@@ -21,19 +21,19 @@ function switchText(event) {
 
         if (touchX < screenWidth / 2) {
             if (currentIndex > 0) {
-                currentIndex = (currentIndex - 1 + texts.length) % texts.length; // Index für vorherigen Text berechnen
-                forwardCount = Math.max(0, forwardCount - 1); // Vorwärtszähler reduzieren, aber nicht unter 0 gehen
+                currentIndex = (currentIndex - 1 + texts.length) % texts.length; 
+                forwardCount = Math.max(0, forwardCount - 1); 
             }
         } else {
-            if (forwardCount < 5 && currentIndex < texts.length - 1) {
-                currentIndex = (currentIndex + 1) % texts.length; // Index für nächsten Text berechnen
+            if (forwardCount < 7 && currentIndex < texts.length - 1) {
+                currentIndex = (currentIndex + 1) % texts.length; 
                 forwardCount++;
             }
         }
     } else {
-        // Fallback für den Fall, dass kein Event übergeben wurde (z. B. beim automatischen Wechsel)
-        if (forwardCount < 5 && currentIndex < texts.length - 1) {
-            currentIndex = (currentIndex + 1) % texts.length; // Index für nächsten Text berechnen
+        
+        if (forwardCount < 7 && currentIndex < texts.length - 1) {
+            currentIndex = (currentIndex + 1) % texts.length; 
             forwardCount++;
         }
     }
@@ -50,8 +50,8 @@ function switchText(event) {
         `;
         document.removeEventListener('touchstart', switchText);
     } else {
-        // Animation vor dem Einsetzen der neuen Inhalte starten
-        panel.style.overflow = 'hidden'; // Overflow auf 'hidden' setzen, um Texte auszublenden
+        
+        panel.style.overflow = 'hidden'; 
         panel.innerHTML = `
             <h1>${texts[currentIndex].title}</h1>
             <div id="content">
@@ -59,10 +59,10 @@ function switchText(event) {
             </div>
         `;
 
-        // Timeout verwenden, um die Animation nach dem Einsetzen der Inhalte zu starten
+        
         setTimeout(function() {
-            panel.style.overflow = 'visible'; // Overflow wieder auf 'visible' setzen
-            animateText(); // Funktion aufrufen, um Animation zu starten
+            panel.style.overflow = 'visible'; 
+            animateText(); 
         }, 100);
     }
 }
@@ -72,53 +72,64 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         window.close(); // Schließt das Fenster, wenn Escape gedrückt wird
     } else {
-        switchText(event); // Übergeben des Event-Objekts an switchText-Funktion
+        switchText(event); 
     }
 });
 
 // Event Listener für Touch-Ereignisse
 document.addEventListener('touchstart', function(event) {
-    switchText(event); // Übergeben des Event-Objekts an switchText-Funktion
+    switchText(event); 
 });
 function animateText() {
     let headers = document.querySelectorAll('#panel h1, #panel #content p');
     headers.forEach(header => {
-        header.style.animation = 'slideFromTop 0.5s forwards';
+    header.style.animation = 'slideFromTop 0.5s forwards';
     });
 }
 
 let texts = [
     
 	{
-        title: "Mein Selbstportät...",
+        title: "Mein Selbstporträt...",
         items: ["...aber anders"],
 		image: "image2.jpg",
 		imagePosition: "left"
     },
     {
-        title: "<u>Inhalte</u>",
+        title: "<b><u>Inhalte</u></b>",
         items: ["Grundlegendes", "Hobbys", "Interessen", "Interessen bezogen auf Kunst"],
 		image: "image2.jpg",
 		imagePosition: "left"
     },
     {
-        title: "<u>Grundlegendes</u>",
-        items: ["Name: Aaron Franzmann", "Wohnort: Wölfersheim", "Alter: 17", "Klasse: 11"]
+        title: "<b><u>Grundlegendes</u></b>",
+        items: ["<b><u>Name:</u></b> Aaron Franzmann", "<b><u>Wohnort:</u></b> Wölfersheim", "<b><u>Alter:</u></b> 17", "<b><u>Klasse:</u></b> 11"]
 		
     },
     {
-        title: "<u>Hobbys</u>",
+        title: "<b><u>Hobbys</u></b>",
         items: ["Badminton", "Programmieren", "Gaming"]
     },
 	{
-        title: "<u>Interessen</u>",
-        items: ["Chemie", "Mathe", "Informatik"]
+        title: "<b><u>Interessen</u></b>",
+        items: ["<b><u>Chemie:</u></b> Ich finde es faszinierend, wie chemische Prozesse überall vorhanden sind", "<b><u>Informatik:</u></b> Ich finde es Interessant, wie man selbst Programme schreiben oder Websiten programmieren kann"]
     },
 	{
-        title: "<u>Interessen bezogen auf Kunst</u>",
-        items: ["Materialien: Bleistift, Buntstifte, Acryl", "Stil: Realismus"],
-		image: "image.jpg",
-		imagePosition: "right" 
+        title: "<b><u>Interessen bezogen auf Kunst</u></b>",
+        items: ["<b><u>Materialien:</u></b> Bleistift, Buntstifte, Acryl", "<b><u>Stil</u></b>: Realismus"],
+		
+    },
+	{
+        title: "<b><u>Private Ziele</u></b>",
+        items: ["<b><u>Studieren:</u></b> Informatik","<b><u>Ziele:</u></b> Meinen Platz in der Gesellschaft zu finden","Ein ausgeglichenes Verhältniss zwischen Schule und Privatem finden"],
+		image: "image2.jpg",
+		imagePosition: "left"
+    },
+	{
+        title: "<b><u>Ziele für die Gesellschaft</u></b>",
+        items: ["Den Fokus darauf zu legen alle gleich zu behandeln", "Etwas zum Umweltschutz beitragen","Soziale Ungleichheiten zu bekämpfen"],
+		image: "image2.jpg",
+		imagePosition: "left"
     }
 ];
 
@@ -167,5 +178,3 @@ function handleTouchEnd(event) {
 	  panel.style.transform = 'scale(1)';
     }, 100); 
 }
-
-
