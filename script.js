@@ -127,7 +127,7 @@ let texts = [
     },
 	{
         title: "<b><u>Ziele für die Gesellschaft</u></b>",
-        items: ["Den Fokus darauf zu legen alle gleich zu behandeln", "Etwas zum Umweltschutz beitragen","Soziale Ungleichheiten bekämpfen"],
+        items: ["Den Fokus darauf zu legen, alle gleich zu behandeln.", "Etwas zum Umweltschutz beitragen.","Soziale Ungleichheiten bekämpfen."],
 		image: "image2.jpg",
 		imagePosition: "left"
     }
