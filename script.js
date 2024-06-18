@@ -103,7 +103,7 @@ let texts = [
     },
     {
         title: "<b><u>Grundlegendes</u></b>",
-        items: ["<b><u>Name:</u></b> Aaron Franzmann", "<b><u>Wohnort:</u></b> Wölfersheim", "<b><u>Alter:</u></b> 17", "<b><u>Klasse:</u></b> 11"]
+        items: ["<b><u>Name:</u></b> Aaron", "<b><u>Wohnort:</u></b> Wölfersheim", "<b><u>Alter:</u></b> 17", "<b><u>Klasse:</u></b> 11"]
 		
     },
     {
