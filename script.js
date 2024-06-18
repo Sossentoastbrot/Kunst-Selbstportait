@@ -112,7 +112,7 @@ let texts = [
     },
 	{
         title: "<b><u>Interessen</u></b>",
-        items: ["<b><u>Chemie:</u></b> Ich finde es faszinierend, wie chemische Prozesse überall vorhanden sind", "<b><u>Informatik:</u></b> Ich finde es Interessant, wie man selbst Programme schreiben oder Websiten programmieren kann"]
+        items: ["<b><u>Chemie:</u></b> Ich finde es faszinierend, wie chemische Prozesse überall vorhanden sind", "<b><u>Informatik:</u></b> Ich finde es interessant, wie man selbst Programme schreiben oder Websites programmieren kann"]
     },
 	{
         title: "<b><u>Interessen bezogen auf Kunst</u></b>",
@@ -121,13 +121,13 @@ let texts = [
     },
 	{
         title: "<b><u>Private Ziele</u></b>",
-        items: ["<b><u>Studieren:</u></b> Informatik","<b><u>Ziele:</u></b> Meinen Platz in der Gesellschaft zu finden","Ein ausgeglichenes Verhältniss zwischen Schule und Privatem finden"],
+        items: ["<b><u>Studieren:</u></b> Informatik","<b><u>Ziele:</u></b> Meinen Platz in der Gesellschaft zu finden","Ein ausgeglichenes Verhältnis zwischen Schule und Privatem finden"],
 		image: "image2.jpg",
 		imagePosition: "left"
     },
 	{
         title: "<b><u>Ziele für die Gesellschaft</u></b>",
-        items: ["Den Fokus darauf zu legen alle gleich zu behandeln", "Etwas zum Umweltschutz beitragen","Soziale Ungleichheiten zu bekämpfen"],
+        items: ["Den Fokus darauf zu legen alle gleich zu behandeln", "Etwas zum Umweltschutz beitragen","Soziale Ungleichheiten bekämpfen"],
 		image: "image2.jpg",
 		imagePosition: "left"
     }
